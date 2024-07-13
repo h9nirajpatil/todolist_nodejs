@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/infinitescroll.css" />
+
+    <title>ToDo App</title>
+
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo"><i class="ri-function-add-fill"></i>TODOIST</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">About Us</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Services</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Featured</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Contact Me</a>
+                    </li>
+                </ul>
+
+                <!-- Close button -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <!-- Search button -->
+                <i class="ri-search-line nav__search" id="search-btn"></i>
+
+                <!-- Login button -->
+                <form action="/signin" method="POST">
+                    <button class="login-btn">Login</button>
+                </form>
+                <form action="/signup" method="POST">
+                    <button class="styled-button">
+                        Register
+                        <div class="inner-button">
+                            <svg id="Arrow" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" height="30px"
+                                width="30px" class="icon">
+                                <defs>
+                                    <linearGradient y2="100%" x2="100%" y1="0%" x1="0%" id="iconGradient">
+                                        <stop style="stop-color: #ffffff; stop-opacity: 1" offset="0%"></stop>
+                                        <stop style="stop-color: #aaaaaa; stop-opacity: 1" offset="100%"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path fill="url(#iconGradient)"
+                                    d="M4 15a1 1 0 0 0 1 1h19.586l-4.292 4.292a1 1 0 0 0 1.414 1.414l6-6a.99.99 0 0 0 .292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 0 0-.216-.324l-6-6a1 1 0 0 0-1.414 1.414L24.586 14H5a1 1 0 0 0-1 1z">
+                                </path>
+                            </svg>
+                        </div>
+                    </button>
+                </form>
+
+                <!-- Toggle button -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== SEARCH ====================-->
+    <div class="search" id="search">
+        <form action="" class="search__form">
+            <i class="ri-search-line search__icon"></i>
+            <input type="search" placeholder="What are you looking for?" class="search__input" />
+        </form>
+
+        <i class="ri-close-line search__close" id="search-close"></i>
+    </div>
+
+    <!--==================== LOGIN ====================-->
+    <div class="login" id="login">
+        <form action="/login" method="POST" class="login__form">
+            <h2 class="login__title">Log In</h2>
+
+            <div class="login__group">
+                <div>
+                    <label for="email" class="login__label">Email</label>
+                    <input type="text" placeholder="Write your email" id="email" class="login__input" name="loginId" />
+                </div>
+
+                <div>
+                    <label for="password" class="login__label">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password" class="login__input"
+                        name="password" />
+                </div>
+            </div>
+
+            <div>
+                <p class="login__signup">
+                    You do not have an account? <a href="#">Sign up</a>
+                </p>
+
+                <a href="#" class="login__forgot"> You forgot your password </a>
+
+                <button type="submit" class="login__button">Log In</button>
+            </div>
+        </form>
+
+        <i class="ri-close-line login__close" id="login-close"></i>
+    </div>
+
+    <!--==================== Tab Button ====================-->
+
+    <div class="hero">
+        <div>
+            <div class="btn-box">
+                <button id="btn1" onclick="openHTML()">
+                    <i class="fa-solid fa-server"></i>ACITIVITY
+                </button>
+                <button id="btn2" onclick="openCSS()">
+                    <i class="fa-solid fa-people-group"></i>TEAM
+                </button>
+                <button id="btn3" onclick="openJAVASCRIPT()">
+                    <i class="fa-brands fa-square-upwork"></i>WORK
+                </button>
+            </div>
+            <div id="content1" class="content">
+                <div class="content-left">
+                    <h1>Team productivity made sample</h1>
+                    <br />
+                    <h3>
+                        Keep track of your shared tasks, projects, and deadlines. Trusted by
+                        teams who have better things to do than overcomplicate it.
+                    </h3>
+                    <p>
+                        <i>“Delegation, communication and the many options for task
+                            parameterization allow us to maintain an overview and make quick
+                            project changes.”</i>
+                    </p>
+                    <br />
+                    <a><button>Start Free</button></a>
+                    <p>Then &nbsp; <sup>RS</sup>6K per member/month billed yearly</p>
+                </div>
+                <div class="content-right">
+                    <img src="/assets/activityimage.png" alt="" />
+                </div>
+            </div>
+            <div id="content2" class="content">
+                <div class="content-left">
+                    <h1>On every device your team touches</h1>
+                    <br />
+                    <h3>
+                        With real-time sync across 10+ platforms, everyone will have the
+                        most up-to-date information. Always.
+                    </h3>
+                    <p>
+                        <i>Give your team a shared place to collaborate and progress
+                            important projects – alongside but separate from their personal
+                            to-dos.</i>
+                    </p>
+                    <br />
+                    <a><button>Watch Video</button></a>
+                </div>
+                <div class="content-right">
+                    <img src="/assets/teamimage.png" alt="" />
+                </div>
+            </div>
+            <div id="content3" class="content">
+                <div class="content-left">
+                    <h1>Start collaborating in seconds</h1>
+                    <br />
+                    <h3>
+                        Simple enough for everyone on your team to quickly pick up, yet
+                        powerful enough to execute your team’s most ambitious plans.
+                    </h3>
+                    <p>
+                        <i>“We need a quick and easy place where we synchronize and know
+                            what to achieve next – without the overhead of complex project
+                            management platforms. Todoist hits the right trade-off.”</i>
+                    </p>
+                    <br />
+                    <a><button>Watch Video</button></a>
+                </div>
+                <div class="content-right">
+                    <img src="/assets/workimage.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================== Slider animation ====================-->
+
+    <div class="wrapper">
+        <div class="item item1"><img src="assets/logos/3m.svg" alt="" /></div>
+        <div class="item item2">
+            <img src="/assets/logos/barstool-store.svg" alt="" />
+        </div>
+        <div class="item item3">
+            <img src="/assets/logos/budweiser.svg" alt="" />
+        </div>
+        <div class="item item4">
+            <img src="/assets/logos/buzzfeed.svg" alt="" />
+        </div>
+        <div class="item item5">
+            <img src="/assets/logos/forbes.svg" alt="" />
+        </div>
+        <div class="item item6">
+            <img src="/assets/logos/macys.svg" alt="" />
+        </div>
+        <div class="item item7">
+            <img src="/assets/logos/menshealth.svg" alt="" />
+        </div>
+        <div class="item item8">
+            <img src="/assets/logos/mrbeast.svg" alt="" />
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer__addr">
+            <h1 class="footer__logo"><i class="ri-function-add-fill"></i>TODOIST</h1>
+
+            <h2>Contact</h2>
+
+            <address>
+                5534 Somewhere In. The World 22193-10212<br>
+
+                <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+            </address>
+        </div>
+
+        <ul class="footer__nav">
+            <li class="nav__item">
+                <h2 class="nav__title">Media</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="#">Online</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Print</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Alternative Ads</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav__item nav__item--extra">
+                <h2 class="nav__title">Technology</h2>
+
+                <ul class="nav__ul nav__ul--extra">
+                    <li>
+                        <a href="#">Hardware Design</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Software Design</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Digital Signage</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Automation</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Artificial Intelligence</a>
+                    </li>
+
+                    <li>
+                        <a href="#">IoT</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav__item">
+                <h2 class="nav__title">Legal</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Terms of Use</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Sitemap</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="legal">
+            <p>Niraj &copy; 2024 Something. All rights reserved.</p>
+
+            <div class="legal__links">
+                <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+            </div>
+        </div>
+    </footer>
+    <!--end  -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        /*=============== SHOW MENU ===============*/
+        const navMenu = document.getElementById("nav-menu"),
+            navToggle = document.getElementById("nav-toggle"),
+            navClose = document.getElementById("nav-close");
+
+        /* Menu show */
+        navToggle.addEventListener("click", () => {
+            navMenu.classList.add("show-menu");
+        });
+
+        /* Menu hidden */
+        navClose.addEventListener("click", () => {
+            navMenu.classList.remove("show-menu");
+        });
+
+        /*=============== SEARCH ===============*/
+        const search = document.getElementById("search"),
+            searchBtn = document.getElementById("search-btn"),
+            searchClose = document.getElementById("search-close");
+
+        /* Search show */
+        searchBtn.addEventListener("click", () => {
+            search.classList.add("show-search");
+        });
+
+        /* Search hidden */
+        searchClose.addEventListener("click", () => {
+            search.classList.remove("show-search");
+        });
+
+        /*=============== LOGIN ===============*/
+        const login = document.getElementById("login"),
+            loginBtn = document.getElementById("login-btn"),
+            loginClose = document.getElementById("login-close");
+
+        /* Login show */
+        loginBtn.addEventListener("click", () => {
+            login.classList.add("show-login");
+        });
+
+        /* Login hidden */
+        loginClose.addEventListener("click", () => {
+            login.classList.remove("show-login");
+        });
+    </script>
+</body>
+
+</html>

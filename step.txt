@@ -1,0 +1,43 @@
+Todo App
+
+setup express server : Done
+mangodb connection : Done
+
+set the view engine of express to EJS : DOne
+
+
+Register Page : Done
+Login Page : Done
+
+Register apis : Done
+login apis : Done
+
+Session base auth : Done
+middleware to protect th api'server
+
+Dashbaord Page
+logout
+logout from all devices
+
+Todo API'server
+create API  : Done
+read API : Done
+edit API : Done
+delete API : Done
+
+
+Dashboard client (Axios) : Done
+axios create API : Done
+axios read API : Done
+axios edit API : Done
+axios delete API : Done
+
+
+Pagination : Done
+RateLimiting
+
+Email base Auth
+
+
+//create to Done
+todo schema (todo,username) ---> todoModel
